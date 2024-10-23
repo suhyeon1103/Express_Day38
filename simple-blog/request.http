@@ -1,2 +1,25 @@
-POST http://localhost:3000
-Content-Type: application
+### 게시글 작성
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "첫 번째 글",
+    "content": "블로그 시작합니다!"
+}
+
+### 모든 게시글 조회
+GET http://localhost:3000/posts
+
+### 특정 게시글 조회
+GET http://localhost:3000/posts/3
+
+### 특정 게시글 수정
+PUT http://localhost:3000/posts/3
+Content-Type: application/json
+
+{
+    "title": "수정된 제목"
+}
+
+### 특정 게시글 삭제
+DELETE http://localhost:3000/posts/2
